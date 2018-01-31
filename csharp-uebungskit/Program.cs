@@ -1,4 +1,5 @@
 ﻿using System;
+using csharp_canvas;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +15,9 @@ namespace csharp_uebungskit
         [STAThread]
         static void Main()
         {
-            DrawingArea area = new DrawingArea();
+            CsharpCanvas canvas = new CsharpCanvas();
+            DrawingArea area = new DrawingArea(canvas);
+            canvas.Setup(30);
         }
     }
 }

@@ -9,11 +9,10 @@ namespace csharp_uebungskit
 {
     class DrawingArea
     {
-        CsharpCanvas canvas;
-        public DrawingArea()
+        private CsharpCanvas canvas;
+        public DrawingArea(CsharpCanvas aCanvas)
         {
-            // erzeuge ein neues Canvas
-            canvas = new CsharpCanvas();
+            canvas = aCanvas;
             
             // Vorder- und Hintergrund definieren
             canvas.SetBackgroundColor(0x00, 0xA8, 0xC6);
@@ -21,9 +20,6 @@ namespace csharp_uebungskit
 
             // Draw Event abonieren
             canvas.Draw += Canvas_Draw;
-
-            // Initialisieren für kontinuierliches Zeichnen mit 30 Frames
-            canvas.Setup(30);        
         }
 
         private void Canvas_Draw()
