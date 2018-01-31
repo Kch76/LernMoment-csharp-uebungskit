@@ -1,5 +1,5 @@
-﻿using System;
-using csharp_canvas;
+﻿using Lernmoment.CscharpCanvas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +17,7 @@ namespace csharp_uebungskit
         {
             CsharpCanvas canvas = new CsharpCanvas();
             DrawingArea area = new DrawingArea(canvas);
-            canvas.Setup(30);
+            canvas.Setup();
         }
     }
 }
